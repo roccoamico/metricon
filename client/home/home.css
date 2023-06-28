@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+}
+
+h1 {
+  color: firebrick;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+
+.btn-primary {
+  background-color: firebrick;
+  border-color: firebrick;
+
+}
+
+.btn-primary:hover {
+  background-color: red;
+}

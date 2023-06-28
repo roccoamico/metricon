@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetricON</title>
+  <!-- Includi i link CSS di Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="channel.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-5">MetricON</h1>
+
+    <h2 class="mt-5">Statistiche canale Youtube</h2>
+    <form id="channelForm" class="mt-3">
+      <div class="mb-3">
+        <label for="channelInput" class="form-label">Canale YouTube:</label>
+        <input type="text" class="form-control" id="channelInput" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Visualizza statistiche canale</button>
+    </form>
+    <div id="errorBox" class="alert alert-danger d-none" role="alert">
+      Canale non trovato. Riprovare.
+    </div>
+    
+    <div id="statschannel" class="mt-4 d-none">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di iscritti</h5>
+              <p class="card-text" id="subscriberCount"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di visualizzazioni totali</h5>
+              <p class="card-text" id="viewCount"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di video</h5>
+              <p class="card-text" id="videoCount"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Counter iscritti nascosto</h5>
+              <p class="card-text" id="hiddenSubscriberCount"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Nazione</h5>
+              <p class="card-text" id="country"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Made for Kids</h5>
+              <p class="card-text" id="madeForKids"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chart-container">
+          <h2 class="mt-4">Video più popolari</h2>
+          <canvas id="popularVideosChart"></canvas>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Includi i link JavaScript di Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="channel.js"></script>
+</body>
+
+</html>

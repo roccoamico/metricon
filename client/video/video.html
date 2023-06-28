@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetricON</title>
+  <!-- Includi i link CSS di Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="video.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="mt-5">MetricON</h1>
+    
+    <h2 class="mt-5">Statistiche video Youtube</h2>
+    <form id="urlForm" class="mt-3">
+      <div class="mb-3">
+        <label for="urlInput" class="form-label">URL Video:</label>
+        <input type="text" class="form-control" id="urlInput" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Visualizza statistiche video</button>
+    </form>
+    <div id="errorBox" class="alert alert-danger d-none" role="alert">
+      URL non valido. Riprovare.
+    </div>
+  
+    <div id="statsvideo" class="mt-4 d-none">
+      <div class="row">
+  
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di visualizzazioni</h5>
+              <p class="card-text" id="videoViewCount"></p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di like</h5>
+              <p class="card-text" id="likeCount"></p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Numero di commenti</h5>
+              <p class="card-text" id="commentCount"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <h2>Proporzione tra like e commenti</h2>
+          <canvas id="videoChart"></canvas>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Includi i link JavaScript di Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+  <script src="video.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</body>
+
+</html>

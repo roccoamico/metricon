@@ -1,0 +1,51 @@
+body {
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+}
+
+h1 {
+  color: firebrick;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.form-control {
+  color: #fff;
+  border-color: #333;
+}
+
+.btn-primary {
+  background-color: firebrick;
+  border-color: firebrick;
+
+}
+
+.btn-primary:hover {
+  background-color: red;
+}
+
+.card {
+  margin-top: 15px;
+  border-color: black;
+}
+
+.card-title {
+  color: firebrick;
+}
+
+.card-text {
+  color: #333;
+}
+
+#errorBox {
+  margin-top: 15px;
+}
+
+.chart-container {
+  width: 550px;
+  height: 550px;
+  margin-top: 20px;
+} 
