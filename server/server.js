@@ -8,9 +8,15 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../client/home')));
 app.use(express.static(path.join(__dirname, '../client/channel')));
 app.use(express.static(path.join(__dirname, '../client/video')));
+app.use(express.static(path.join(__dirname, '../client/cv')));
+
 
 
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/cv', 'cv.html'));
+});
+
+app.get('/metricon', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/home', 'home.html'));
 });
 
@@ -155,8 +161,10 @@ app.get('/api/popularVideos', async (req, res) => {
 });
 
 
-const port = process.env.PORT;
+// Avvio del server sulla porta 3000
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
+
