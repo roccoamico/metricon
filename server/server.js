@@ -10,8 +10,6 @@ app.use(express.static(path.join(__dirname, '../client/channel')));
 app.use(express.static(path.join(__dirname, '../client/video')));
 app.use(express.static(path.join(__dirname, '../client/cv')));
 
-
-
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/cv', 'cv.html'));
 });
