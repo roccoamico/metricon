@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  color: firebrick;
+  color: rgb(25, 135, 84);
   font-size: 60px;
   font-weight: bold;
 }
@@ -18,11 +18,11 @@ p {
 
 
 .btn-primary {
-  background-color: firebrick;
-  border-color: firebrick;
+  background-color: rgb(25, 135, 84);
+  border-color: rgb(25, 135, 84);
 
 }
 
 .btn-primary:hover {
-  background-color: red;
+  background-color: mediumseagreen;
 }
